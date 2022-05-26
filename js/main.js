@@ -196,13 +196,13 @@ if ($('.typed-text-output').length == 1) {
 }
 
 
-GitHubCalendar(".calendar", "bilalibniqbal");
+GitHubCalendar(".calendar", "usama-x930");
 
         // or enable responsive functionality:
-        GitHubCalendar(".calendar", "bilalibniqbal", { responsive: true });
+        GitHubCalendar(".calendar", "usama-x930", { responsive: true });
 
         // Use a proxy
-        // GitHubCalendar(".calendar", "bilalibniqbal", {
+        // GitHubCalendar(".calendar", "usama-x930", {
         //    proxy (username) {
         //      return fetch(`https://your-proxy.com/github?user=${username}`)
         //    }
@@ -213,10 +213,10 @@ GitHubCalendar(".calendar", "bilalibniqbal");
 
 
         GitHubActivity.feed({
-            username: "bilalibniqbal",
+            username: "usama-x930",
             repository: "your-repo", // optional
             selector: "#feed",
-            limit: 20, // optional
+            limit: 10, // optional
         });
 
 

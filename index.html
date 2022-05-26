@@ -25,7 +25,8 @@
     <!-- github calendar css -->
     <link rel="stylesheet" href="github-calendar/dist/github-calendar-responsive.css">
     <!-- github activity css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css"> -->
+    <link rel="stylesheet" href="github-activity/src/octicons.css">
     <link rel="stylesheet" href="github-activity/src/github-activity.css">
 
     <!-- Theme CSS -->
@@ -36,6 +37,7 @@
     <link rel="stylesheet" href="dark-mode-switch/dark-mode.css">
     <link id="theme-style" rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="github-activity/src/mustache.min.js">
+    <script type="text/javascript" src="github-activity/src/github-activity.js"></script>
     <link rel="stylesheet" href="github-activity/src/github-activity.dark.css">
 
     <!-- couses white proglem <link rel="stylesheet" href="bootstrap/css/bootstrap.css"> -->
@@ -1935,6 +1937,32 @@
                 </aside>
                 <!--//section-->
 
+
+
+                <!-- GitHub calendar and  GitHub Activity Stream start-->
+                <!-- https://github.com/Bloggify/github-calendar -->
+                <!-- https://github.com/caseyscarborough/github-activity -->
+
+                <aside class="githubsec aside section sections-wrapper" style="padding: 0px 0px 0px 20px">
+                    <section class="about section col-sm-11">
+                        <div class="section-inner shadow rounded">
+                            <h2 class="heading">My GitHub</h2>
+                            <p>GitHub Calendar </p>
+                            <!-- <div class="calendar Prepare-container-for-your-calendar"> -->
+                            <div class="calendar">
+
+                                Loading the data just for you.
+                            </div>
+
+                            <p>GitHub Activity Stream </p>
+
+                            <div id="feed"></div>
+                        </div>
+                    </section>
+                </aside>
+                <!-- GitHub calendar and  GitHub Activity Stream end-->
+
+
                 <aside class="contact aside section sections-wrapper" style="padding: 0px 0px 0px 20px">
                     <section class="about section col-sm-11" id="navcontact">
                         <div class="section-inner shadow rounded">
@@ -2050,6 +2078,22 @@
     <script type="text/javascript" src="github-activity/src/github-activity.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="js/main.js"></script>
+
+
+    <script>
+        GitHubCalendar(".calendar", "usama-x930");
+        // or enable responsive functionality
+        GitHubCalendar(".calendar", "usama-x930", { responsive: true });
+    </script>
+
+    <script>
+        GitHubActivity.feed({
+            username: "usama-x930",
+            // repository: "your-repo", // optional
+            selector: "#feed",
+            limit: 10, // optional
+        });
+    </script>
 
 </body>
 
